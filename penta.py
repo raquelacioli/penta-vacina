@@ -27,6 +27,7 @@ def login():
         st.session_state.login_error = "Usuário ou senha incorretos"
 
 if not st.session_state.logged_in:
+    st.image("VIGIPENTA.png", width=800)
     st.title("🔐 Acesso ao Painel")
     st.text_input("E-mail", key="username")
     st.text_input("Senha", type="password", key="password")
@@ -36,6 +37,7 @@ if not st.session_state.logged_in:
     st.stop()
 
 st.title("📊 Painel de Monitoramento - Vacinação Pentavalente")
+st.image("VIGIPENTA.png", caption="VIGIPENTA", width=800)
 st.markdown("Insira o banco de dados de vacinação para calcular automaticamente os indicadores de saúde.")
 
 # Upload do arquivo (Aceita CSV ou Excel)
